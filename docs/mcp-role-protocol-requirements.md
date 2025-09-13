@@ -3,7 +3,17 @@
 参照元（例）
 - MCP Basic Spec — Authorization (2025-06-18): https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization
 - スライド: https://speakerdeck.com/kuralab/20250620-openid-technight-mcp-oauth?slide=17
-- 関連 RFC: 6749, 6750, 7636, 8252, 8414, 8707, 9728, 7591/7592, 8628（任意）
+- 関連 RFC:
+    - RFC 6749: The OAuth 2.0 Authorization Framework
+    - RFC 6750: The OAuth 2.0 Authorization Framework: Bearer Token Usage
+    - RFC 7636: Proof Key for Code Exchange (PKCE) by OAuth Public Clients
+    - RFC 8252: OAuth 2.0 for Native Apps
+    - RFC 8414: OAuth 2.0 Authorization Server Metadata
+    - RFC 8707: Resource Indicators for OAuth 2.0
+    - RFC 9728: OAuth 2.0 Protected Resource Metadata
+    - RFC 7591: OAuth 2.0 Dynamic Client Registration Protocol（任意）
+    - RFC 7592: OAuth 2.0 Dynamic Client Registration Management Protocol（任意）
+    - RFC 8628: OAuth 2.0 Device Authorization Grant（任意）
 
 ## MCP Client（OAuth Client）
 - MUST [RFC 6749][RFC 7636]: Authorization Code + PKCE（S256）を使用
