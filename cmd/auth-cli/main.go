@@ -7,7 +7,6 @@ import (
 	"log"
 	"net/url"
 	"os"
-	"strings"
 
 	"mcp-oauth-poc/internal/client/authurl"
 	"mcp-oauth-poc/internal/client/callback"
