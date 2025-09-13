@@ -1,5 +1,7 @@
 # PoC: MCP クライアント補助ツール（Authorization Code + PKCE, 手動コピー方式）
 
+前提: MCP Server の Transport に HTTP/WS を用いる構成で、Authorization Code + PKCE を前提とします。
+
 目的
 - MCP Client（CLI/デスクトップ）が Authorization Code + PKCE を用いて AS と連携するための最小ツール群を提供する。
 - ループバック受信なし（手動コピー方式）を前提とし、UXを損なわずに安全性を確保する。

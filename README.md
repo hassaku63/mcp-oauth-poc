@@ -1,15 +1,14 @@
 # README
 
-このリポジトリは、OAuth 2.0 における "Dynamic Client Registration" の仕様理解を目的とした学習用リポジトリです。
+自作 MCP Server (HTTP/WS トランスポートを前提) と クライアント（例: Claude Code CLI, Codex CLI, Cline など）を組み合わせる場合を想定し、
+OAuth 2.0 を用いた認可周辺の仕様を理解することを目的とする学習用リポジトリです。
+
+なお、Dynamic Client Registration（RFC 7591/7592）の適用可能性・運用も併せて検討します。
 
 以下のことをします。
 
 1. RFC ドキュメントを読み、仕様を理解する
 2. (未定) 仕様に基づいて、サンプルコードを実装する (Go 言語)
-
-また、この調査の最終目的は自作の MCP (Model Context Protocol) の認可機構として Dynamic Client Registration を組み込むことです。
-本ドキュメント記載時点での MCP 最新仕様 (Version 2025-06-18) では Dynamic Client Registration への対応が明言されています。
-
 
 ## References
 

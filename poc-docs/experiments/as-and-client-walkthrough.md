@@ -1,5 +1,7 @@
 # 実験手順（OAuth AS PoC × クライアントCLI, 手動コピー方式）
 
+前提: 本手順は MCP Server の Transport に HTTP を用いる構成を対象とします。
+
 前提
 - Go 1.22 以上
 - ブラウザが利用可能

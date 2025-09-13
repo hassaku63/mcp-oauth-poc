@@ -1,5 +1,7 @@
 # PoC: Protected Resource 検証（OAuth 2.0 Bearer + JWT）
 
+前提: MCP Server の Transport に HTTP/WS を用いる構成を対象とします。
+
 目的
 - 取得済みアクセストークンで保護リソースにアクセスできることを検証し、RFC 6750（Bearer）準拠の挑戦/エラー応答と、JWT クレーム（iss/aud/exp/scope 等）の検証を行う。
 

@@ -1,5 +1,7 @@
 # PoC: 最低限の OAuth 2.0 Authorization Server（DCR なし）
 
+前提: MCP Server の Transport に HTTP/WS を用いる前提での検証です。
+
 目的
 - MCP Server の HTTP 認可前提に合わせ、最小限の Authorization Server 機能を持つテスト用 AS を Go で実装する。
 - Dynamic Client Registration（RFC 7591/7592）は除外。クライアントは静的に定義。

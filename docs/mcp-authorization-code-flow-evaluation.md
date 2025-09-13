@@ -1,5 +1,7 @@
 # MCP Authorization — Authorization Code Flow
 
+前提: 本評価は MCP の HTTP/WS トランスポートを対象に、OAuth 2.0（Authorization Code + PKCE）前提で整理しています。
+
 前提
 - MCP Server は OAuth 2.0 の観点では「保護リソース（Resource Server）」として振る舞い、RFC 9728（Protected Resource Metadata）を公開して認可サーバの場所を示す必要がある。
 - MCP Client は OAuth 2.0 の「クライアント（OAuth Client）」として振る舞い、認可サーバからアクセストークンを取得して MCP Server（保護リソース）へ提示する。

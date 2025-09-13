@@ -13,7 +13,9 @@
     - RFC 9728: OAuth 2.0 Protected Resource Metadata
     - RFC 7591: OAuth 2.0 Dynamic Client Registration Protocol（任意）
     - RFC 7592: OAuth 2.0 Dynamic Client Registration Management Protocol（任意）
-    - RFC 8628: OAuth 2.0 Device Authorization Grant（任意）
+- RFC 8628: OAuth 2.0 Device Authorization Grant（任意）
+
+前提: 本要件は MCP Server の Transport に HTTP/WS を想定して整理しています（stdio 等では接続レイヤの OAuth 要件は必須ではありません）。
 
 ## MCP Client（OAuth Client）
 

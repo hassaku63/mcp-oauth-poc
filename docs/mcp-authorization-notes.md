@@ -1,5 +1,7 @@
 # MCP Authorization — 要点メモ
 
+前提: 本メモは MCP の HTTP/WS トランスポートを想定しています（stdio 等では接続レイヤの OAuth 要件は適用されない場合があります）。
+
 このメモは MCP（Model Context Protocol）のドキュメントにおける「Authorization（認可）」の位置付けと利用方法の要点を整理したものです。引用ではなく要約です。
 
 参照元（一次情報）:
