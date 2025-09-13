@@ -1,3 +1,4 @@
-module mcp-oauth-study
+module mcp-oauth-poc
 
-go 1.24.6
+go 1.22
+

@@ -26,3 +26,4 @@
 - sequence-diagrams.md: フローのシーケンス図
 - impl-plan.md: Go 実装手順
 - security-notes.md: セキュリティ観点
+- 次フェーズ計画: ../plans/oauth-as-next-steps.md
