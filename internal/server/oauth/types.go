@@ -7,11 +7,14 @@ import (
 
 // Config holds server-wide settings and signing material.
 type Config struct {
-	Issuer     string
-	TokenTTL   time.Duration
-	CodeTTL    time.Duration
-	KeyID      string
-	PrivateKey *rsa.PrivateKey
+    Issuer     string
+    TokenTTL   time.Duration
+    CodeTTL    time.Duration
+    KeyID      string
+    PrivateKey *rsa.PrivateKey
+    // ResourceID is the audience identifier that access tokens must target
+    // to be accepted by the protected resource in this PoC.
+    ResourceID string
 }
 
 // CodeRecord stores authorization code binding info for PKCE verification and token minting.

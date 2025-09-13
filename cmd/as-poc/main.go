@@ -18,13 +18,14 @@ func main() {
 		log.Fatal(err)
 	}
 
-	cfg := oh.Config{
-		Issuer:     "http://localhost:8080",
-		TokenTTL:   1 * time.Hour,
-		CodeTTL:    2 * time.Minute,
-		KeyID:      "poc-key-1",
-		PrivateKey: priv,
-	}
+    cfg := oh.Config{
+        Issuer:     "http://localhost:8080",
+        TokenTTL:   1 * time.Hour,
+        CodeTTL:    2 * time.Minute,
+        KeyID:      "poc-key-1",
+        PrivateKey: priv,
+        ResourceID: "http://localhost-resource",
+    }
 
 	store := oh.NewStore(cfg)
 	issuer := oh.NewIssuer(cfg)
@@ -36,9 +37,12 @@ func main() {
 	mux.HandleFunc("/.well-known/oauth-authorization-server", wh.AuthorizationServerMetadataHandler(cfg))
 	mux.HandleFunc("/.well-known/jwks.json", wh.JWKSHandler(cfg))
 
-	// OAuth endpoints
-	mux.HandleFunc("/oauth2/authorize", oh.AuthorizeHandler(store, validator))
-	mux.HandleFunc("/oauth2/token", oh.TokenHandler(store, issuer, validator))
+    // OAuth endpoints
+    mux.HandleFunc("/oauth2/authorize", oh.AuthorizeHandler(store, validator))
+    mux.HandleFunc("/oauth2/token", oh.TokenHandler(store, issuer, validator))
+
+    // Protected resource endpoint
+    mux.HandleFunc("/resource/echo", oh.ProtectedEchoHandler(cfg))
 
 	srv := &http.Server{Addr: ":8080", Handler: logging(mux)}
 	log.Println("AS PoC listening on", srv.Addr)

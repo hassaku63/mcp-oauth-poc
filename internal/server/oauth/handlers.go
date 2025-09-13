@@ -143,13 +143,13 @@ func handleAuthCodeGrant(w http.ResponseWriter, r *http.Request, store *Store, i
 		writeOAuthError(w, http.StatusBadRequest, "invalid_grant", "pkce verification failed")
 		return
 	}
-	aud := rec.Resource
-	if aud == "" {
-		aud = resource
-	}
-	if aud == "" {
-		aud = "http://localhost-resource" // fallback for PoC
-	}
+    aud := rec.Resource
+    if aud == "" {
+        aud = resource
+    }
+    if aud == "" {
+        aud = store.cfg.ResourceID
+    }
 	tok, err := issuer.MintAccessToken("user-123", aud, rec.Scope)
 	if err != nil {
 		writeOAuthError(w, http.StatusInternalServerError, "server_error", "failed to mint token")

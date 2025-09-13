@@ -77,10 +77,34 @@ bin/auth-cli complete \
 ## 6. トークンの確認（任意）
 - 開発用途でJWTのヘッダ/ペイロードをBase64URLデコードして `aud`/`scope`/`exp` を確認してください（署名検証はAS/リソースサーバ側の責務）。
 
+## 7. Protected Resource を呼び出す
+`/resource/echo` は `mcp.read` スコープが必須、`aud` は `http://localhost-resource` である必要があります（既定）。
+
+```
+ACCESS_TOKEN=<上の手順で取得したトークン>
+curl -sS http://localhost:8080/resource/echo \
+  -H "Authorization: Bearer $ACCESS_TOKEN"
+```
+
+期待される応答（例）:
+```
+{
+  "sub": "user-123",
+  "aud": "http://localhost-resource",
+  "scope": "mcp.read mcp.write",
+  "exp": 1735680000
+}
+```
+エラー例:
+- 401 Unauthorized（`WWW-Authenticate: Bearer error="invalid_token"`）… 期限切れ/署名不正/issuer不一致/audience不一致 など
+- 403 Forbidden（`WWW-Authenticate: Bearer error="insufficient_scope", scope="mcp.read"`）… `mcp.read` が無い
+
 ## トラブルシュート
 - 401/403 が出る: `grant_type`/`client_id`/`redirect_uri`/`code_verifier`/`state` を再確認。認可コードのTTL（標準で2分）切れにも注意。
 - state mismatch: `session_id` を取り違えていないか確認。`url` と `complete` で同じセッションを使う。
 - ブラウザでのURLコピー: クエリパラメータを省略せず、フルURLをそのまま貼り付けること。
+ - audience 不一致: セッション作成の `--resource` が `http://localhost-resource`（既定の ResourceID）であるか確認。
+ - scope 不足: セッション作成の `--scope` に `mcp.read` を含める。
 
 ## Make の補助ターゲット
 ```
