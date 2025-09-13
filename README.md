@@ -22,3 +22,9 @@
     - [Lifecycle](https://modelcontextprotocol.io/specification/2025-06-18/basic/lifecycle)
     - [Authorization](https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization)
     - [Security Best Practices](https://modelcontextprotocol.io/specification/2025-06-18/basic/security_best_practices)
+
+## 補助資料
+
+- [kura - OAuth/OpenID Connectで実現するMCPのセキュアなアクセス管理](https://speakerdeck.com/kuralab/20250620-openid-technight-mcp-oauth)
+- [hi120ki - MCPの認証と認可の現在と未来](https://hi120ki.github.io/ja/blog/posts/20250728/)
+- [Hi120ki - MCPの認証と認可 - MCP Meetup Tokyo 2025](https://speakerdeck.com/hi120ki/mcp-authorization)
