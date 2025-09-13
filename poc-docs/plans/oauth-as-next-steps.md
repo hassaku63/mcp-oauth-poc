@@ -9,7 +9,7 @@
 
 ## タスク一覧
 - UI: `web/templates/login.html`, `web/templates/consent.html` とハンドラ追加（セッションはメモリ）。
-- バリデーション: `internal/oauth/validator.go` の redirect 検証ロジック強化、テストデータ追加。
+- バリデーション: `internal/server/oauth/validator.go` の redirect 検証ロジック強化、テストデータ追加。
 - リソースAPI: `cmd/as-poc` に `GET /resource/echo` を追加、`Authorization` 検証と `WWW-Authenticate` 実装。
 - CLIツール: `scripts/auth-cli`（Go/シェルいずれか）で以下を提供：
   - `new`（PKCE＋state生成、JSON出力）

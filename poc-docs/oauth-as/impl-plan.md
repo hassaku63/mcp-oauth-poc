@@ -10,12 +10,11 @@
 ## ディレクトリ構成（提案）
 ```
 cmd/as-poc/main.go          # エントリポイント
-internal/http/handlers.go   # 各エンドポイント
-internal/oauth/validator.go # PKCE/state/resource 検証
-internal/oauth/issuer.go    # トークン発行（JWT）
-internal/oauth/store.go     # コード/デバイスコード/セッション in-memory
-internal/oauth/clients.go   # 静的クライアント定義
-internal/wellknown/meta.go  # RFC 8414/ JWKS 生成
+internal/server/oauth/validator.go # PKCE/state/resource 検証
+internal/server/oauth/issuer.go    # トークン発行（JWT）
+internal/server/oauth/store.go     # コード/セッション in-memory
+internal/server/oauth/clients.go   # 静的クライアント定義
+internal/server/wellknown/meta.go  # RFC 8414/ JWKS 生成
 web/templates/*             # login/consent
 ```
 
