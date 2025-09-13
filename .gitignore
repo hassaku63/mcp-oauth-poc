@@ -43,6 +43,8 @@ $RECYCLE.BIN/
 vendor/
 go.work
 go.work.sum
+/bin/
+/dist/
 
 # cache for document URLs
 /docs/cache/
