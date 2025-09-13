@@ -48,17 +48,3 @@
 
 ## 位置付け（まとめ）
 - クライアントは「AS から適切にトークンを取得」し、サーバは「RS として標準に従い検証・応答」する。MCP はその上で、公開機能の最小化と実行時 Permissions により、操作粒度の安全性を高める二層設計となる。
-
----
-参考RFC（略号→正式名）
-- [RFC 6749]: The OAuth 2.0 Authorization Framework
-- [RFC 6750]: The OAuth 2.0 Authorization Framework: Bearer Token Usage
-- [RFC 7636]: Proof Key for Code Exchange (PKCE) by OAuth Public Clients
-- [RFC 8252]: OAuth 2.0 for Native Apps
-- [RFC 8414]: OAuth 2.0 Authorization Server Metadata
-- [RFC 8707]: Resource Indicators for OAuth 2.0
-- [RFC 9728]: OAuth 2.0 Protected Resource Metadata
-- [RFC 7517]: JSON Web Key (JWK)
-- [RFC 7591]: OAuth 2.0 Dynamic Client Registration Protocol
-- [RFC 7592]: OAuth 2.0 Dynamic Client Registration Management Protocol
-- [RFC 8628]: OAuth 2.0 Device Authorization Grant
