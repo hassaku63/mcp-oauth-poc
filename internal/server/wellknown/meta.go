@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-    oh "mcp-oauth-poc/internal/server/oauth"
+	oh "mcp-oauth-poc/internal/server/oauth"
 )
 
 func AuthorizationServerMetadataHandler(cfg oh.Config) http.HandlerFunc {

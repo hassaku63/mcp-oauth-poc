@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"time"
 
-    oh "mcp-oauth-poc/internal/server/oauth"
-    wh "mcp-oauth-poc/internal/server/wellknown"
+	oh "mcp-oauth-poc/internal/server/oauth"
+	wh "mcp-oauth-poc/internal/server/wellknown"
 )
 
 func main() {
